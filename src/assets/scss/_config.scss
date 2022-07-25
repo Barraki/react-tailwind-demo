@@ -1,0 +1,224 @@
+// USER VARIABLES SECTION
+$accent: #addccf; // Accent Color
+$fontsize: 16px; // Body Font Size
+$lineheight: 1.65; // Document Line Height
+$userfont: "Maison Neue", sans-serif; // User Font Family
+$fontBebas: "Bebas Neue", sans-serif;
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+
+// Variables for dark theme
+$dark-logo: #ffff;
+$dark-background-color: #0d0f0f;
+$dark-textcolor: #ffffff;
+$dark-modal-background: #1f212a;
+$dark-form-control-background: #14171e;
+$dark-form-control-border: #555555;
+$dark-button-border-transparent: #333746;
+$dark-button-border-transparent-hover: #2d303e;
+$dark-modal-link: #FFFFFF;
+$dark-modal-link-hover: #cac9c9;
+$dark-modal-nav-background: #333746;
+$dark-google-button: #979797;
+
+// Colors sidebars
+$dark-sidebar-background: #1D212C;
+$dark-sidebar-text-nav-item-active: #ffffff;
+$dark-sidebar-background-nav-item-active: #0D0F0F;
+$dark-sidebar-border-nav-item-active: #FFFFFF;
+
+// General
+$dark-underline: #333746;
+$dark-bg-transparent : rgba(31, 33, 42, 0.6);
+$white-bg-transparent : rgba(229, 229, 229, 0.6);
+
+
+// Variables for white theme
+$white-logo: #14171E;
+$white-background-color: #E5E5E5;
+$white-textcolor: #14171E;
+$white-modal-background: #FFFFFF;
+$white-form-control-background: #EDEFF1;
+$white-form-control-border: #EDEFF1;
+$white-button-border-transparent: #333746;
+$white-button-border-transparent-hover: #EDEFF1;
+$white-modal-link: #14171E;
+$white-modal-link-hover: #606b86;
+$white-modal-nav-background: #EDEFF1;
+$white-google-button: #14171E;
+
+// Colors sidebars
+$white-sidebar-background: #FFFFFF;
+$white-sidebar-text-nav-item-active: #14171E;
+$white-sidebar-background-nav-item-active: $accent;
+$white-sidebar-border-nav-item-active: #14171E;
+
+// General
+$white-underline: #EDEFF1;
+$input-bg: #1F212A;
+
+// Font weight
+$font-weight-300: 300;
+$font-weight-400: 400;
+$font-weight-500: 500;
+$font-weight-600: 600;
+$font-weight-700: 700;
+$font-weight-900: 900;
+
+
+
+:root, [data-theme="dark"] {
+	--color-logo: #{$dark-logo};
+  --color-page-background: #{$dark-background-color};
+  --color-text: #{$dark-textcolor};
+  --color-modal-background: #{$dark-modal-background};
+	--color-form-control-background: #{$dark-form-control-background};
+	--color-form-control-border: #{$dark-form-control-border};
+	--color-button-border-transparent: #{$dark-button-border-transparent};
+	--color-button-border-transparent-hover: #{$dark-button-border-transparent-hover};
+	--color-modal-link: #{$dark-modal-link};
+	--color-modal-link-hover: #{$dark-modal-link-hover};
+	--color-modal-nav-background: #{$dark-modal-nav-background};
+	--color-google-button: #{$dark-google-button};
+	--color-sidebar-background: #{$dark-sidebar-background};
+	--color-sidebar-text-nav-item-active: #{$dark-sidebar-text-nav-item-active};
+	--color-sidebar-background-nav-item-active: #{$dark-sidebar-background-nav-item-active};
+	--color-sidebar-border-nav-item-active: #{$dark-sidebar-border-nav-item-active};
+	--color-underline: #{$dark-underline};
+	--bg-transparent: #{$dark-bg-transparent};
+}
+
+[data-theme="light"] {
+	--color-logo: #{$white-logo};
+	--color-page-background: #{$white-background-color};
+  --color-text: #{$white-textcolor};
+  --color-modal-background: #{$white-modal-background};
+	--color-form-control-background: #{$white-form-control-background};
+	--color-form-control-border: #{$white-form-control-border};
+	--color-button-border-transparent-hover: #{$white-button-border-transparent-hover};
+	--color-modal-link: #{$white-modal-link};
+	--color-modal-link-hover: #{$white-modal-link-hover};
+	--color-modal-nav-background: #{$white-modal-nav-background};
+	--color-google-button: #{$white-google-button};
+	--color-sidebar-background: #{$white-sidebar-background};
+	--color-sidebar-text-nav-item-active: #{$white-sidebar-text-nav-item-active};
+	--color-sidebar-background-nav-item-active: #{$white-sidebar-background-nav-item-active};
+	--color-sidebar-border-nav-item-active: #{$white-sidebar-border-nav-item-active};
+	--color-underline: #{$white-underline};
+	--bg-transparent: #{$white-bg-transparent};
+}
+
+// IMPORT SECTION
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// FONTS LOAD SECTION
+
+// GENERAL DOCUMENT STYLES
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #cccccc #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 7px;
+	background: #33373E;
+	border-radius: 25px;
+}
+
+*::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #979797;
+  border-radius: 25px;
+}
+
+::placeholder {
+	color: #666;
+	font-size: 14px;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+::focus {
+	outline: initial;
+}
+
+input,
+textarea {
+	outline: none;
+	&.has-error {
+		border-color: red;
+	}
+	&.valid {
+		border-color: green;
+	}
+}
+
+textarea::placeholder {
+	font-size: 1rem;
+}
+
+label {
+	color: #979797
+}
+
+b {
+	display: contents;
+}
+
+.react-simple-star-rating svg {
+	display: inline-block;
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+	-ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body {
+	font-family: $userfont;
+	font-size: $fontsize;
+	line-height: $lineheight;
+	background-color: var(--color-page-background);
+	color: var(--color-text);
+	min-width: 320px;
+	font-weight: normal;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.App-header {
+	background-color: #ca1ccd;
+}
+
+.App-link {
+	@apply focus:outline-none 
+	text-white 
+	bg-green-700 
+	hover:bg-green-800 
+	focus:ring-4 
+	focus:ring-green-300 
+	font-medium 
+	rounded-lg 
+	text-sm 
+	px-5 
+	py-2.5 
+	mr-2 
+	mb-2 
+	dark:bg-green-600 
+	dark:hover:bg-green-700 
+	dark:focus:ring-green-800;
+}
